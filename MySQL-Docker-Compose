@@ -19,16 +19,6 @@ services:
             - '8080:8080'
         depends_on:
             - mysqldb   
-    web:
-        image: muraric/imathas:1.1
-        restart: always
-        container_name: "webapp"
-        volumes:
-            - web-data:/var/www/html
-        ports:
-            - '80:80'
-        depends_on:
-            - mysqldb
 volumes:
     db-data:
     web-data:
